@@ -10,8 +10,8 @@ const NovedadesPage = (props) => {
     useEffect(() => {
         const cargarNovedades = async () => {
             setLoading(true);
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/novedades`); //esto es para heroku
-            //const response = await axios.get('http://localhost:3000/api/novedades'); esto es para prueba en server local*
+            // const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/novedades`); //esto es para heroku
+            const response = await axios.get('http://localhost:3000/api/novedades'); //esto es para prueba en server local*
             setNovedades(response.data);
             setLoading(false);
         };
